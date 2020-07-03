@@ -1,0 +1,41 @@
+<!-- Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
+
+<idea-plugin>
+
+  <!--  Unique id for this plugin. Must stay constant for the life of the plugin.  -->
+  <id>net.greybeardedgeek.intellij.plugin.rubberDuckToolWindow</id>
+
+  <!-- Text to display as name on Preferences/Settings | Plugin page  -->
+  <name>Rubber Duck</name>
+
+  <!-- Indicate this plugin can be loaded in all IntelliJ Platform-based products. -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <!-- Text to display as description on Preferences/Settings | Plugin page  -->
+  <description>
+    <![CDATA[
+      This is a Rubber Duck to help you with debugging
+    ]]>
+  </description>
+  <change-notes>
+    <![CDATA[
+      <ul>
+        <li><b>2.0.0</b> Convert to Gradle-based plugin and new plugin architecture</li>
+        <li><b>1.0.0</b> Initial Release - IDEA build 111.69 </li>
+      </ul>
+    ]]>
+  </change-notes>
+
+  <!-- Text to display as company information on Preferences/Settings | Plugin page -->
+  <vendor url="https://github.com/rfreedman/intellij-rubber-duck-plugin-2">GreyBeardedGeek - Rubber Duck Plugin</vendor>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow
+        id="Rubber Duck"
+        secondary="true"
+        anchor="right"
+        factoryClass="net.greybeardedgeek.intellij.plugin.rubberDuckToolWindow.RubberDuckToolWindowFactory"
+    />
+  </extensions>
+
+</idea-plugin>

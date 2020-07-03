@@ -1,0 +1,4 @@
+net/greybeardedgeek/intellij/plugin/rubberDuckToolWindow/RubberDuckToolWindow.java
+ net.greybeardedgeek.intellij.plugin.rubberDuckToolWindow.RubberDuckToolWindow
+net/greybeardedgeek/intellij/plugin/rubberDuckToolWindow/RubberDuckToolWindowFactory.java
+ net.greybeardedgeek.intellij.plugin.rubberDuckToolWindow.RubberDuckToolWindowFactory

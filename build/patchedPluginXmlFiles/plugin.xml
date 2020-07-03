@@ -1,0 +1,24 @@
+<idea-plugin>
+  <version>2.0.0</version>
+  <idea-version since-build="201" until-build="201.*"/>
+  <id>net.greybeardedgeek.intellij.plugin.rubberDuckToolWindow</id>
+  <name>Rubber Duck</name>
+  <depends>com.intellij.modules.platform</depends>
+  <description>
+    
+      This is a Rubber Duck to help you with debugging
+    
+  </description>
+  <change-notes>
+    
+      &lt;ul&gt;
+        &lt;li&gt;&lt;b&gt;2.0.0&lt;/b&gt; Convert to Gradle-based plugin and new plugin architecture&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;1.0.0&lt;/b&gt; Initial Release - IDEA build 111.69 &lt;/li&gt;
+      &lt;/ul&gt;
+    
+  </change-notes>
+  <vendor url="https://github.com/rfreedman/intellij-rubber-duck-plugin-2">GreyBeardedGeek - Rubber Duck Plugin</vendor>
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow id="Rubber Duck" secondary="true" anchor="right" factoryClass="net.greybeardedgeek.intellij.plugin.rubberDuckToolWindow.RubberDuckToolWindowFactory"/>
+  </extensions>
+</idea-plugin>

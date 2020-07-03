@@ -1,0 +1,12 @@
+03/07 16:48:00 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - Process started with '--ide-token /Users/rfreedman/projects/intellij-rubber-duck-plugin-2/build/idea-sandbox/system/token --recorder FUS --files /Users/rfreedman/projects/intellij-rubber-duck-plugin-2/build/idea-sandbox/system/event-log/54e7-4747-aab6-097713377c49-201.6668.121-release.log --device 1106192d1fd63ad-f479-4835-a7bd-03e22d2057f9 --bucket 222 --url https://resources.jetbrains.com/storage/fus/config/%s/lion-v3-assistant.xml --product IC --user-agent IntelliJ IDEA/201.6668.121'
+03/07 16:48:00 INFO  com.intellij.internal.statistic.uploader.events.ExternalEventsLogger - 1593809280223 STARTED
+03/07 16:48:00 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - IDE token file: /Users/rfreedman/projects/intellij-rubber-duck-plugin-2/build/idea-sandbox/system/token
+03/07 16:48:00 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - Waiting for 2000ms for IDE to close. Attempt #0
+03/07 16:48:02 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - Start uploading...
+03/07 16:48:02 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - {url:https://resources.jetbrains.com/storage/fus/config/%s/lion-v3-assistant.xml, product:IC, userAgent:IntelliJ IDEA/201.6668.121(External), internal:false, isTest:false}
+03/07 16:48:02 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - {recorder:FUS, files:/Users/rfreedman/projects/intellij-rubber-duck-plugin-2/build/idea-sandbox/system/event-log/54e7-4747-aab6-097713377c49-201.6668.121-release.log}
+03/07 16:48:02 INFO  com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - {device:1106192d1fd63ad-f479-4835-a7bd-03e22d2057f9, bucket:222}
+03/07 16:48:03 TRACE com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - Removed sent log: 54e7-4747-aab6-097713377c49-201.6668.121-release.log
+03/07 16:48:03 INFO  com.intellij.internal.statistic.uploader.events.ExternalEventsLogger - 1593809283056 FINISHED NOT_PERMITTED_SERVER
+03/07 16:48:03 TRACE com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - Uploading finished with NOT_PERMITTED_SERVER
+03/07 16:48:03 TRACE com.intellij.internal.statistic.uploader.ExternalDataCollectorLogger - NOT_PERMITTED

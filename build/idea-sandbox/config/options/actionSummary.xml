@@ -1,0 +1,24 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <data>
+      <entry key="ActivateRubberDuckToolWindow">
+        <ActionSummary times="3" last="1593809232450" />
+      </entry>
+      <entry key="ActivateSampleCalendarToolWindow">
+        <ActionSummary times="1" last="1593808567215" />
+      </entry>
+      <entry key="WelcomeScreen.CreateNewProject">
+        <ActionSummary times="1" last="1593808364710" />
+      </entry>
+      <entry key="com.intellij.ide.ReopenProjectAction">
+        <ActionSummary times="2" last="1593809214214" />
+      </entry>
+      <entry key="com.intellij.ide.actions.ToolWindowViewModeAction">
+        <ActionSummary times="5" last="1593809266264" />
+      </entry>
+      <entry key="com.intellij.openapi.wm.impl.ToolWindowHeader$ShowOptionsAction">
+        <ActionSummary times="12" last="1593809263926" />
+      </entry>
+    </data>
+  </component>
+</application>
