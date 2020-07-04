@@ -1,49 +1,69 @@
-// Copyright 2000-2020 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
-
 package net.greybeardedgeek.intellij.plugin.rubberDuckToolWindow;
 
 import com.intellij.openapi.wm.ToolWindow;
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
+import org.jdesktop.swingx.JXImageView;
 
 import javax.swing.*;
-import java.util.Calendar;
+import java.awt.*;
+import java.net.URISyntaxException;
 
+@SuppressWarnings("unused")
 public class RubberDuckToolWindow {
-  private JButton refreshToolWindowButton;
-  private JButton hideToolWindowButton;
-  private JLabel currentDate;
-  private JLabel currentTime;
-  private JLabel timeZone;
-  private JPanel myToolWindowContent;
+  private JPanel toolWindowContent;
+  private JButton quackButton;
+  private JXImageView duckImageView;
+  private JPanel basePanel;
+  private JPanel scrollPanel;
 
+  final JFXPanel fxPanel = new JFXPanel(); // to initialize JFX
+
+  MediaPlayer mediaPlayer;
+
+  @SuppressWarnings("unused")
   public RubberDuckToolWindow(ToolWindow toolWindow) {
-    hideToolWindowButton.addActionListener(e -> toolWindow.hide(null));
-    refreshToolWindowButton.addActionListener(e -> currentDateTime());
-
-    this.currentDateTime();
+    initializeSound();
+    Color backgroundColor =  new Color(242, 0, 0);
+    toolWindowContent.setBackground(backgroundColor);
+    basePanel.setBackground(backgroundColor);
+    duckImageView.setBackground(backgroundColor);
+    quackButton.addActionListener(e -> quack());
+    this.duck();
   }
 
-  public void currentDateTime() {
-    // Get current date and time
-    Calendar instance = Calendar.getInstance();
-    currentDate.setText(
-            instance.get(Calendar.DAY_OF_MONTH) + "/"
-                    + (instance.get(Calendar.MONTH) + 1) + "/"
-                    + instance.get(Calendar.YEAR)
-    );
-    currentDate.setIcon(new ImageIcon(getClass().getResource("/toolWindow/Calendar-icon.png")));
-    int min = instance.get(Calendar.MINUTE);
-    String strMin = min < 10 ? "0" + min : String.valueOf(min);
-    currentTime.setText(instance.get(Calendar.HOUR_OF_DAY) + ":" + strMin);
-    currentTime.setIcon(new ImageIcon(getClass().getResource("/toolWindow/Time-icon.png")));
-    // Get time zone
-    long gmt_Offset = instance.get(Calendar.ZONE_OFFSET); // offset from GMT in milliseconds
-    String str_gmt_Offset = String.valueOf(gmt_Offset / 3600000);
-    str_gmt_Offset = (gmt_Offset > 0) ? "GMT + " + str_gmt_Offset : "GMT - " + str_gmt_Offset;
-    timeZone.setText(str_gmt_Offset);
-    timeZone.setIcon(new ImageIcon(getClass().getResource("/toolWindow/Time-zone-icon.png")));
+  public void duck() {
+    duckImageView.setImage(new ImageIcon(getClass().getResource("/rubberDuckToolWindow/duck.png")).getImage());
   }
 
   public JPanel getContent() {
-    return myToolWindowContent;
+    return toolWindowContent;
+  }
+
+  void initializeSound() {
+    quackButton.setEnabled(false);
+    Media quackSound = getQuackSound();
+    if(quackSound != null) {
+      mediaPlayer = new MediaPlayer(quackSound);
+      quackButton.setEnabled(true);
+    }
+  }
+
+  void quack() {
+    System.out.println("quacking!");
+    mediaPlayer.seek(Duration.ZERO);
+    mediaPlayer.play();
+  }
+
+  Media getQuackSound() {
+    try {
+      Media media = new Media(getClass().getResource("/quack.mp3").toURI().toString());
+      return media;
+    } catch (URISyntaxException e) {
+      e.printStackTrace();
+      return null;
+    }
   }
 }

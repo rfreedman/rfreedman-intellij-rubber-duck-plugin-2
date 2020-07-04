@@ -1,0 +1,17 @@
+<conversion>
+  <applied-converters>
+    <converter id="kotlin-non-jvm-source-roots" />
+    <converter id="junit-to-android-junit-configurations" />
+    <converter id="android-sdk-library" />
+    <converter id="android-module-to-java-module" />
+    <converter id="android-proguard-options" />
+  </applied-converters>
+  <project-files>
+    <file path="/Users/rfreedman/IdeaProjects/untitled4/.idea/modules.xml" timestamp="1593821830091" />
+    <file path="/Users/rfreedman/IdeaProjects/untitled4/untitled4.iml" timestamp="1593821829998" />
+    <file path="/Users/rfreedman/IdeaProjects/untitled4/.idea/misc.xml" timestamp="1593821830072" />
+    <file path="/Users/rfreedman/IdeaProjects/untitled4/.idea/kotlinc.xml" timestamp="1593821830100" />
+    <file path="/Users/rfreedman/IdeaProjects/untitled4/.idea/libraries/KotlinJavaRuntime.xml" timestamp="1593821830114" />
+    <file path="/Users/rfreedman/IdeaProjects/untitled4/.idea/workspace.xml" timestamp="1593821830061" />
+  </project-files>
+</conversion>
